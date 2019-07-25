@@ -5,10 +5,6 @@ var moves = 0;
 
 var matchedCard = document.getElementsByClassName("match");
 
-var modal = document.getElementById("popup-win");
-
-var close = document.querySelector(".close"); 
-
 var lockBoard = false;
 
 var flippedCards = [];
@@ -42,8 +38,6 @@ function matched() {
     flippedCards[0].removeEventListener("click",flipCard);
     flippedCards[1].classList.add("match", "disable");
     flippedCards[0].removeEventListener("click",flipCard);
-    // flippedCards[0].classList.remove("flip");
-    // flippedCards[1].classList.remove("flip");
     flippedCards = [];
 }
 
