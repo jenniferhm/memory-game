@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: lightpink;
+    line-height: 1.6;
+    background: radial-gradient(grey, darkgrey)
+}
+
+.landing {
+    background-image:url("img/catbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.landing h1 {
+    font-size: 50px;
+    text-shadow: 
+    1px -1px 0 grey,
+    -1px 1px 0 grey,
+    1px 1px 0 grey,
+    -1px -1px 0 grey;
+    line-height: 1.2;
+}
+
+.landing p {
+    font-size: 25px;
+    color: grey;
+}
+
+.landing .button,
+.reset-game .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: pink;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.reset-game .button {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .button:hover,
+.reset-game .button:hover {
+    background: magenta;
+    color: white;
+}
+
+.flip-count {
+    width: auto;
+    height: 100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.game {
+    max-width: 840px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    perspective: greypx;
+}
+
+.memory-card {
+    width: 120px;
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .6s;
+}
+
+.memory-card:active {
+    transform: scale(.96);
+    transition: transform .3s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: lightpink;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.overlay {
+    position: fixed;
+    background: grey;
+    transition: opacity 500ms;
+    visibility: hidden;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.visibility {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+.popup-win {
+	margin: 70px auto;
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	width: 85%;
+	position: relative;
+	transition: all 5s ease-in-out;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .close:hover {
+	color: #E5F720;
+}
+
+.footer {
+    text-align: center;
+}
