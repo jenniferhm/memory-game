@@ -120,49 +120,6 @@ body {
     transform: rotateY(180deg);
 }
 
-.overlay {
-    position: fixed;
-    background: grey;
-    transition: opacity 500ms;
-    visibility: hidden;
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-.visibility {
-    visibility: visible !important;
-    opacity: 100 !important;
-}
-
-.popup-win {
-	margin: 70px auto;
-	padding: 20px;
-	background: #ffffff;
-	border-radius: 5px;
-	width: 85%;
-	position: relative;
-	transition: all 5s ease-in-out;
-	font-family: 'Gloria Hallelujah', cursive;
-}
-
-.popup .close {
-	position: absolute;
-	top: 20px;
-	right: 30px;
-	transition: all 200ms;
-	font-size: 30px;
-	font-weight: bold;
-	text-decoration: none;
-	color: #333;
-}
-
-.popup .close:hover {
-	color: #E5F720;
-}
-
 .footer {
     text-align: center;
 }
